@@ -6,11 +6,12 @@ const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null)
 
+  const name = useRef(null)
   const email = useRef(null)
   const password = useRef(null)
   const handleButtonClick = () => {
     // validate data
-    const message = checkValidData(email.current.value, password.current.value)
+    const message = checkValidData(name.current.value, email.current.value, password.current.value)
     setErrorMessage(message)
 }
 
@@ -21,8 +22,9 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute">
+      <div className="absolute ">
         <img
+          className="h-full w-full object-cover"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/594f8025-139a-4a35-b58d-4ecf8fdc507c/d3c4e455-f0bf-4003-b7cd-511dda6da82a/IN-en-20240108-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt="background"
         />
@@ -33,6 +35,7 @@ const Login = () => {
         </h1>
         {!isSignInForm && <input
           type="text"
+          ref={name}
           placeholder="Full Name"
           className="p-4 my-4 w-full rounded bg-gray-700"
         />}
