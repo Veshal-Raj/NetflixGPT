@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
+import {USER_AVATAR} from "../utils/constants"
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -44,7 +45,7 @@ const Login = () => {
           const user = userCredential.user;
           console.log(user);
           updateProfile(user, {
-            displayName: name?.current?.value, photoURL: "https://avatars.githubusercontent.com/u/115520285?v=4"
+            displayName: name?.current?.value, photoURL: USER_AVATAR
           }).then(() => {
             // Profile updated!
             const {uid, email, displayName, photoURL} = auth.currentUser;
