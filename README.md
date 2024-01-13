@@ -6,6 +6,9 @@
 - Login form
 - Sign up form
 - Form Validation
+- Firebase setup
+- Deploying app to production
+- create signup user account
 
 # Features
 - Login / Sign up page
