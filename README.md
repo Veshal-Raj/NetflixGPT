@@ -8,7 +8,12 @@
 - Form Validation
 - Firebase setup
 - Deploying app to production
-- create signup user account
+- Create signup user account
+- Implement Sign In user api
+- Created Redux Store with userSlice
+- Implemented Sign Out feature
+- Update Profile
+
 
 # Features
 - Login / Sign up page
